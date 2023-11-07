@@ -1,0 +1,145 @@
+@keyframes announcement-bar-animation {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-100%);
+    }
+}
+.announcement-bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow: hidden;
+}
+
+.announcement-bar__item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5rem;
+    animation: announcement-bar-animation 15s linear infinite;
+}
+
+.shape-circle {
+    display: block;
+    width: 0.25rem;
+    height: 0.25rem;
+    background: red;
+    border-radius: 50%;
+    transform: translateY(.6rem);
+}
+
+#header {
+    background-color: #212121;
+    position: relative;
+}
+
+.header__iner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.header__logo {
+    height: unset;
+    width: 144px;
+} 
+
+.header__logo img {
+    width: auto;
+    height: 100%;
+}
+
+.nav-item {
+    padding: 30px 16px;
+}
+
+.nav-item > a {
+    line-height: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.nav-item:hover {
+    background: #3c3c3c;
+}
+
+/*
+
+.nav-item:hover .sub-menu {
+    opacity: 1;
+    pointer-events: visible;
+    visibility: visible
+}
+
+
+.sub-menu {
+    width: 100%;
+    transition: all .3s;
+    /* z-index: 10;
+    pointer-events: none;
+    visibility: hidden; */
+/* }
+
+.sub-menu__wrapper {
+    position: relative;
+    background: #ededed;
+    /* z-index: 1;
+    transition: opacity .2s ease-out .22s,visibility 0ms ease .35s;
+    visibility: hidden */
+/* }
+
+.sub-menu__inner {
+    display: flex;
+    width: 100%;
+    margin: 0 auto
+}
+
+.sub-menu__item {
+    padding: 0 40px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 200%;
+    letter-spacing: .03em;
+    color: #707171;
+    position: relative;
+    width: 240px
+}
+
+ */ 
+
+.header-actions-search__control {
+    padding: 0 20px 0 40px;
+    height: 50px;
+    background-color: #e8e8e8;
+    border-radius: 33px;
+    border: none;
+}
+
+.header-actions-search__control:focus {
+    outline: none;
+}
+
+.header-actions-search__button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    filter: invert(1)
+}
+
+.header-actions__button {
+    width: 48px;
+    height: 48px
+}
+
+.cart-counts {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+    background-color: #f9f86c;
+    font-size: 10px;
+}

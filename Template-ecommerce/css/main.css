@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto
+}
+
+
+.me-6 {
+    margin-right: 5rem !important;
+}
