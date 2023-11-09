@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- Font google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    
+    <!--Css-->
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <main class="login-form">
+        <span class="border-line"></span>
+        <form>
+            <h2>Log in</h2>
+            <div class="input_group">
+                <input type="text" required="required">
+                <label>Username</label>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input_group">
+                <input type="password" required="required">
+                <label>Password</label>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="form-status">
+                <div class="remember">
+                    <input type="checkbox" checked>
+                    <label>Remember me</label>
+                </div>
+                <div class="forgot">
+                    <a href="">Forgot password?</a>
+                </div>
+            </div>
+            <button class="btn-login">Login</button>
+            <div class="register">
+                Do you have an account?<a href="">Sign up</a>
+            </div>
+        </form>
+    </main>
+
+    <!--Js-->
+    <script src="login.js"></script>
+</body>
+
+</html>
