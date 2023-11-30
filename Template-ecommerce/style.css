@@ -247,3 +247,8 @@ img {
     color: #fff;
     font-size: 1.5rem; */
 }
+
+#authModal .social-auth-links img {
+    height: 30px;
+    object-fit: contain;
+}
