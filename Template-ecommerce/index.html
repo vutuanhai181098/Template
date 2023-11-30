@@ -238,6 +238,42 @@
             </div>
         </div>
     </header>
+    <main id="main-content">
+        <div id="banner-slide" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#banner-slide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="">
+                        <img src="https://theme.hstatic.net/200000690725/1001078549/14/slide_1_img.jpg?v=228"
+                            class="d-block w-100" alt="...">
+                        </a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img src="https://theme.hstatic.net/200000690725/1001078549/14/slide_2_img.jpg?v=228"
+                            class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img src="https://theme.hstatic.net/200000690725/1001078549/14/slide_3_img.jpg?v=228"
+                            class="d-block w-100" alt="...">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#banner-slide"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#banner-slide"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
     <!-- Modal search -->
     <div class="modal fade" id="modal-search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -245,7 +281,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <form action="" class="input-group my-2">
-                        <input type="text" class="form-control form-control-lg" placeholder="Tìm kiếm sản phẩm..." required>
+                        <input type="text" class="form-control form-control-lg" placeholder="Tìm kiếm sản phẩm..."
+                            required>
                         <button class="btn btn-outline-secondary" type="submit" id="btn-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -374,93 +411,108 @@
                         </div>
                         <div class="search-viewmore is-active">
                             <div class="search-viewmore__button">
-                                <a href="" class="btn btn-success">Xem tất cả</a></div>
+                                <a href="" class="btn btn-success">Xem tất cả</a>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  
-  <!-- Modal đăng nhập / đăng ký-->
-  <div class="modal fade" id="authModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-            <div class="container p-3 position-relative">
-                <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
-                <div class="header">
-                    <h2 class="form-title text-center mt-2 fw-bold">Đăng nhập</h2>
-                    <span>Đăng nhập để không bỏ lỡ quyền lợi tích luỹ và hoàn tiền
-                        cho bất kỳ đơn hàng nào.</span>
-                </div>
-                <div class="body">
-                    <div class="social-auth-links row mt-3">
-                        <div class="col-6">
-                            <a href="#" class="btn btn-success w-100">
-                                <img src="https://mcdn.coolmate.me/image/September2023/mceclip1_21.png">
-                                <span class="ms-2">Sign in with Google</span>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="btn btn-success w-100">
-                                <img src="https://mcdn.coolmate.me/image/September2023/mceclip0_86.png">
-                                <span class="ms-2">Sign in with FB</span>
-                            </a>
-                        </div>
+
+    <!-- Modal đăng nhập / đăng ký-->
+    <div class="modal fade" id="authModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="container px-3 py-5 position-relative">
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                    <div class="header">
+                        <h2 class="form-title text-center mt-2 fw-bold">Đăng nhập</h2>
+                        <span>Đăng nhập để không bỏ lỡ quyền lợi tích luỹ và hoàn tiền
+                            cho bất kỳ đơn hàng nào.</span>
                     </div>
-                    <div class="position-relative text-center my-2">
-                        <p class="mb-0 fs-5 px-3 d-inline-block bg-white z-1 position-relative">hoặc</p>
-                        <span class="border-top w-100 position-absolute top-50 start-0"></span>
-                    </div>
-                    <!-- Form login -->
-                    <form action="" id="login-form">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Email/SĐT của bạn">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div class="input-group">
-                            <input type="password" class="form-control" placeholder="Mật khẩu">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </div>
-                        <div class="remember">
-                            <input type="checkbox">
-                            <label>Lưu đăng nhập</label>
-                        </div>
-                        <button>Đăng nhập</button>
-                        <div class="auth-actions">
-                            <a href="#" onclick="showRegisterForm()">Đăng ký tài khoản mới</a>
-                            <a href="#">Quên mật khẩu</a></div>
-                    </form>
-                    <form action="" id="register-form" style="display: none;">
-                        <div class="row">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Tên của bạn">
+                    <div class="body">
+                        <div class="social-auth-links row mt-3">
+                            <div class="col-6">
+                                <a href="#" class="btn border border-success-subtle w-100">
+                                    <img src="https://mcdn.coolmate.me/image/September2023/mceclip1_21.png">
+                                    <span class="ms-2">Sign in with Google</span>
+                                </a>
                             </div>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="SĐT của bạn">
+                            <div class="col-6">
+                                <a href="#" class="btn border border-success-subtle w-100">
+                                    <img src="https://mcdn.coolmate.me/image/September2023/mceclip0_86.png">
+                                    <span class="ms-2">Sign in with FB</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Emai của bạn">
+                        <div class="position-relative text-center my-2">
+                            <p class="mb-0 fs-5 px-3 d-inline-block bg-white z-1 position-relative">hoặc</p>
+                            <span class="border-top w-100 position-absolute top-50 start-0"></span>
                         </div>
-                        <div class="input-group">
-                            <input type="password" class="form-control" placeholder="Mật khẩu">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </div>
-                        <div class="input-group">
-                            <input type="password" class="form-control" placeholder="Nhập lại mật khẩu">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </div>
-                        <button>Đăng ký</button>
-                        <div class="auth-actions">
-                            <a href="#" onclick="showLoginForm()">Đăng Nhập</a>
-                    </form>
+                        <!-- Form login -->
+                        <form action="" id="login-form">
+                            <div class="input-group my-3">
+                                <input type="email" id="email" class="form-control" placeholder="Email/SĐT của bạn">
+                                <span class="input-group-text">
+                                    <i class="fa-regular fa-user"></i>
+                                </span>
+                            </div>
+                            <div class="input-group mb-2">
+                                <input type="password" id="password" class="form-control" placeholder="Mật khẩu">
+                                <span class="input-group-text show-hide-password">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </span>
+                            </div>
+                            <div class="remember mb-3">
+                                <input type="checkbox">
+                                <label>Lưu đăng nhập</label>
+                            </div>
+                            <button class="btn btn-success w-100 btn-login mb-2" type="button">Đăng nhập</button>
+                            <div class="auth-actions d-flex justify-content-between">
+                                <a href="#" onclick="showRegisterForm()">Đăng ký tài khoản mới</a>
+                                <a href="#">Quên mật khẩu?</a>
+                            </div>
+                        </form>
+                        <form action="" id="register-form" style="display: none;">
+                            <div class="row my-3">
+                                <div class="col-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Tên của bạn">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="SĐT của bạn">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Emai của bạn">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" placeholder="Mật khẩu">
+                                <span class="input-group-text show-hide-password">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </span>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" placeholder="Nhập lại mật khẩu">
+                                <span class="input-group-text show-hide-password">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </span>
+                            </div>
+                            <button class="btn btn-success w-100 mb-2 btn-register" type="button">Đăng ký</button>
+                            <div class="auth-actions text-center">
+                                <a href="#" onclick="showLoginForm()">Đăng Nhập</a>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
     </div>
-  </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

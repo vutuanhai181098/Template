@@ -8,3 +8,17 @@ const showRegisterForm = () => {
     document.getElementById('register-form').style.display = 'block';
     document.querySelector('#authModal .form-title').innerText = 'Đăng ký';
 }
+
+const showHidePassEl = document.querySelectorAll('.show-hide-password');
+showHidePassEl.forEach(e => {
+    e.addEventListener('click', () => {
+        const inputEl = e.previousElementSibling;
+        if(inputEl.type === "password"){
+            inputEl.type= "text";
+            e.innerHTML = '<i class="fa-regular fa-eye"></i>'
+        } else {
+            inputEl.type= "password";
+            e.innerHTML = '<i class="fa-regular fa-eye-slash    "></i>'
+        }
+    })
+})
