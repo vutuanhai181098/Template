@@ -14,11 +14,11 @@ showHidePassEl.forEach(e => {
     e.addEventListener('click', () => {
         const inputEl = e.previousElementSibling;
         if(inputEl.type === "password"){
-            inputEl.type= "text";
+            inputEl.setAttribute('type', 'text')
             e.innerHTML = '<i class="fa-regular fa-eye"></i>'
         } else {
-            inputEl.type= "password";
-            e.innerHTML = '<i class="fa-regular fa-eye-slash    "></i>'
+            inputEl.setAttribute('type', 'password')
+            e.innerHTML = '<i class="fa-regular fa-eye-slash"></i>'
         }
     })
 })
