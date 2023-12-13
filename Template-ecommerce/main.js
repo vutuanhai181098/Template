@@ -22,3 +22,14 @@ showHidePassEl.forEach(e => {
         }
     })
 })
+
+$(document).ready(function(){
+    $('.slick-list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next')
+    });
+  });
