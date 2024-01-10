@@ -38,8 +38,15 @@ public class Category {
     @Fetch(FetchMode.SUBSELECT)
     private List<Category> subCategories = new ArrayList<>();
 
+<<<<<<< HEAD
 //    @JsonIgnore
 //    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
 //    @Fetch(FetchMode.SUBSELECT)
 //    private List<Product> products = new ArrayList<>();
+=======
+    @JsonIgnore
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @Fetch(FetchMode.SUBSELECT)
+    private List<Product> products = new ArrayList<>();
+>>>>>>> 939f91c69b2c52bbfa9a88e75fd53c4ab3204ca5
 }
