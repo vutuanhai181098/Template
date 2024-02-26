@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto
+}
+
+/* Announcement-bar css*/
+@keyframes announcement-bar-animation {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-100%);
+    }
+}
+.announcement-bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow: hidden;
+}
+.announcement-bar__item {
+    margin-right: 5rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5rem;
+    place-items: center;
+    animation: announcement-bar-animation 15s linear infinite;
+}
+.shape-circle {
+    display: block;
+    width: 0.25rem;
+    height: 0.25rem;
+    background: red;
+    border-radius: 50%;
+}
+
+/* Header css */
+#header {
+    background-color: #231f20;
+    position: relative;
+}
+.header__logo {
+    height: unset;
+    width: 144px;
+} 
+.header__logo img {
+    width: auto;
+    height: 100%;
+}
+
+.nav-item {
+    padding: 30px 16px;
+}
+.nav-item > a {
+    line-height: 20px;
+    white-space: nowrap;
+}
+.nav-item:hover {
+    background-color: #3c3c3c;
+}
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.sub-menu__wrapper {
+    background-color: #231f20;
+}
+
+.sub-menu a:hover {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    transition: all .2s ease-in-out;
+}
+
+.nav-item:hover .sub-menu {
+    opacity: 1;
+    pointer-events: visible;
+    visibility: visible;
+}
+
+.header-actions-search__control {
+    padding: 0 20px 0 40px;
+    height: 50px;
+    background-color: #e8e8e8;
+    border-radius: 33px;
+    border: none;
+}
+.header-actions-search__control:focus {
+    outline: none;
+}
+.header-actions-search__button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    filter: invert(1)
+}
+.header-actions__button {
+    width: 48px;
+    height: 48px
+}
+.cart-counts {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+    background-color: #f9f86c;
+    font-size: 10px;
+}
+

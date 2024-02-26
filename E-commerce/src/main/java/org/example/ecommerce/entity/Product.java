@@ -25,6 +25,34 @@ public class Product {
 
     private Integer price;
 
+<<<<<<< HEAD
+//    @JsonIgnore
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "category_id")
+//    private Category category;
+//
+//    @JsonIgnore
+//    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+//    @Fetch(FetchMode.SUBSELECT)
+//    private List<ProductImage> images = new ArrayList<>();
+//
+//    @Enumerated(EnumType.STRING)
+//    private Status status;
+//
+//    @Getter
+//    public enum Status {
+//        NOT_YET_SOLD("Chưa mở bán"),
+//        AVAILABLE("Đang bán"),
+//        UNAVAILABLE("Hết hàng"),
+//        CEASE("Ngừng bán");
+//
+//        private final String displayValue;
+//
+//        Status(String displayValue) {
+//            this.displayValue = displayValue;
+//        }
+//    }
+=======
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
@@ -51,4 +79,5 @@ public class Product {
             this.displayValue = displayValue;
         }
     }
+>>>>>>> 939f91c69b2c52bbfa9a88e75fd53c4ab3204ca5
 }

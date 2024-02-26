@@ -36,6 +36,25 @@ public class CategoryServiceImpl implements CategoryService {
         Category category = categoryRepository.findById(id)
                 .orElseThrow(() -> new ResolutionException("Can not found category with Id " + id));
 
+<<<<<<< HEAD
+//        if (category.getParentCategory() != null) {
+//            // check category has product use it. if it has, cannot delete. if not, delete
+//            if (!category.getProducts().isEmpty()) {
+//                throw new BadRequestException("This category cannot be deleted because it currently has applicable products");
+//            } else {
+//                categoryRepository.delete(category);
+//            }
+//        } else {
+//            List<Category> subCategories = category.getSubCategories();
+//            for (Category subCategory : subCategories) {
+//                if (!subCategory.getProducts().isEmpty()) {
+//                    throw new BadRequestException("Không thể xoá category này vì có sản phẩm đang sử dụng");
+//                }
+//            }
+//            // delete category parent and sub category
+//            categoryRepository.delete(category);
+//        }
+=======
         if (category.getParentCategory() != null) {
             // check category has product use it. if it has, cannot delete. if not, delete
             if (!category.getProducts().isEmpty()) {
@@ -53,5 +72,6 @@ public class CategoryServiceImpl implements CategoryService {
             // delete category parent and sub category
             categoryRepository.delete(category);
         }
+>>>>>>> 939f91c69b2c52bbfa9a88e75fd53c4ab3204ca5
     }
 }
